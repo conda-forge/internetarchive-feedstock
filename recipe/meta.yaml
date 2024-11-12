@@ -29,6 +29,7 @@ requirements:
     - schema >=0.4.0
     - tqdm >=4.0.0
     - urllib3 >=1.26.0
+    - importlib-metadata >=3.6.0
 
 test:
   imports:
