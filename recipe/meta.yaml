@@ -1,13 +1,13 @@
 {% set name = "internetarchive" %}
-{% set version = "4.1.0" %}
+{% set version = "5.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/internetarchive-{{ version }}.tar.gz
-  sha256: 467188386218d2c77815ca798a51dd18310b326841113bb462b24ea9a71beedc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/internetarchive-{{ version }}.tar.gz
+  sha256: 106ea05eb1fef3560b291dea657bae315702aeab043e764e0f1653eb6d9ea1de
 
 build:
   entry_points:
@@ -18,16 +18,18 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - docopt >=0.6.0,<0.7.0
     - jsonpatch >=0.4
     - requests >=2.25.0,<3.0.0
     - schema >=0.4.0
     - tqdm >=4.0.0
     - urllib3 >=1.26.0
+    - importlib-metadata >=3.6.0
 
 test:
   imports:
@@ -37,6 +39,7 @@ test:
     - ia --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jjjake/internetarchive
