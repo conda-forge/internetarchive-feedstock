@@ -1,5 +1,5 @@
 {% set name = "internetarchive" %}
-{% set version = "5.6.0" %}
+{% set version = "5.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/internetarchive-{{ version }}.tar.gz
-  sha256: b7e47f8a6739fa747c7894dd623392c2b8dd3302a9f686991c331688f065d86a
+  sha256: 879cf7fd490085761634a638d43d36abd77c0355354ffcf5e7a48a2d732a75d6
 
 build:
   entry_points:
