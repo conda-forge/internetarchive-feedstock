@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: internetarchive
-  version: "5.8.0"
+  version: "5.9.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/internetarchive-${{ version }}.tar.gz
-  sha256: 0dff14d51bafa3da587f32a8cb6478327e20c2d040a61fbfb4ad30d592062cc2
+  sha256: 91f3e17217e744d8658848051454f87c8f2431afc450e0491ed4f490b7e37fba
 
 build:
   number: 0
